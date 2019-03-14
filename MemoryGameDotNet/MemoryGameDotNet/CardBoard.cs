@@ -7,6 +7,18 @@ namespace MemoryGameDotNet {
 
         private Card[,] board;
 
+        public int RowCount {
+            get {
+                return board.GetLength(1);
+            }
+        }
+
+        public int ColumnCount {
+            get {
+                return board.GetLength(0);
+            }
+        }
+
         public Card this[int x,int y] {
             get {
                 return board[x, y];
@@ -97,15 +109,5 @@ namespace MemoryGameDotNet {
         }
 
         #endregion
-
-        private struct Point {
-            internal int X { get; set; }
-            internal int Y { get; set; }
-
-            internal Point(int x, int y) {
-                X = x;
-                Y = y;
-            }
-        }
     }
 }

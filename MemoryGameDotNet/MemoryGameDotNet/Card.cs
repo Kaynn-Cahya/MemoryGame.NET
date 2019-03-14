@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MemoryGameDotNet {
     [Serializable]
-    public class Card {
+    public struct Card {
         /// <summary>
         /// Type Identifier for this card. (Used to match other cards of similar number)
         /// </summary>
