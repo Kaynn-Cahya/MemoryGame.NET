@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace MemoryGameDotNet {
     public static class ExtensionMethods {
 
+        /// <summary>
+        /// Comnpares between the card's number.
+        /// </summary>
+        /// <param name="card"></param>
+        /// <param name="target"></param>
+        /// <returns>True if this card matches the target card.</returns>
         public static bool Matches(this Card card, Card target) {
             return card.CardNumber == target.CardNumber;
         }

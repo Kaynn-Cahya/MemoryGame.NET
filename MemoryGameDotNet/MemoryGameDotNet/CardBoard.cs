@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MemoryGameDotNet {
     public class CardBoard {
@@ -103,6 +102,11 @@ namespace MemoryGameDotNet {
         }
 
         #region Util
+
+        internal void ModifyCardIsMatched(int x, int y, bool isMatched) {
+            int cardNo = board[x, y].CardNumber;
+            board[x, y] = new Card(cardNo, isMatched);
+        }
 
         public Card[,] GetBoard() {
             return (Card[,]) board.Clone();

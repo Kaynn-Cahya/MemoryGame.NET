@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MemoryGameDotNet {
     [Serializable]
     public class Player {
 
         /// <summary>
-        /// Set this to identify the player. (Does not affect the library)
+        /// Set this to identify the player for your convenience. (Does not affect the library)
         /// </summary>
         public string Identifier { get; set; }
 
