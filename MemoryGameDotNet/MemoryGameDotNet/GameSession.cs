@@ -72,14 +72,14 @@ namespace MemoryGameDotNet {
             CurrentPlayerNo = 0;
         }
 
-        public void StartGame(int xSize, int ySize, int typeOfCardsCount, List<Player> playersPlaying) {
-            if (playersPlaying.Count <= 0 || playersPlaying == null) {
+        public void StartGame(int xSize, int ySize, int typeOfCardsCount, IEnumerable<Player> playersPlaying) {
+            if (playersPlaying.GetCount() <= 0 || playersPlaying == null) {
                 throw new ArgumentException("There must be at least 1 player playing.", "players");
             }
 
             GameBoard.CreateBoard(xSize, ySize, typeOfCardsCount);
 
-            players = playersPlaying;
+            players = playersPlaying.ToList();
             GameRunning = true;
         }
 
